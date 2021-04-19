@@ -1,0 +1,25 @@
+forall Set A; Set B
+where IsSubset(A, B){
+    ensure smallerThan(A.icon, B.icon)
+    ensure contains(A.icon, B.icon, 5.0)
+    A.icon above B.icon
+
+}
+
+
+
+
+forall Set A; Set B
+where IsIntersect(A, B){
+    ensure disjoint(A.icon, B.icon)
+    ensure smallerThan(A.icon, B.icon)
+    A.icon above B.icon
+}
+
+forall Set x{
+    x.icon = Circle{
+        strokeWidth: 1.5
+    }
+
+}
+
